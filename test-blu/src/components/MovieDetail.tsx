@@ -10,7 +10,6 @@ export default function MovieDetail() {
   useEffect(() => {
     const getMovie = async () => {
       const res = await fetchMovieDetails(Number(id));
-      console.log(res.data)
       setMovie(res?.data ?? []);
     };
     getMovie();
@@ -20,7 +19,7 @@ export default function MovieDetail() {
     <div className="p-4">
       <div className="flex item-end">
         <button onClick={() => navigate(-1)} className="mb-4">
-          &larr; Back
+          &larr; Back 
         </button>
       </div>
       <div className="flex gap-4">

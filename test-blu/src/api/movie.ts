@@ -7,9 +7,6 @@ const BASE_URL = 'https://api.themoviedb.org/3'
 export const fetchMovies = (category: string, page = 1) =>
     axios.get(`${BASE_URL}/movie/${category}?api_key=${API_KEY}&language=en-US&page=${page}`)
 
-export const searchMovies = (query: string, page = 1) =>
-    axios.get(`${BASE_URL}/search/movie?api_key=${API_KEY}&language=en-US&query=${query}&page=${page}&include_adult=false`)
-
 export const fetchMovieDetails = (movieId: number) =>
     axios.get(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}&language=en-US&append_to_response=credits`)
 
