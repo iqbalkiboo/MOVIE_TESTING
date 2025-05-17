@@ -33,8 +33,6 @@ const SearchMovie: React.FC<Props> = ({ onSearch, onCategorySelect }) => {
         onSearch(search);
     }
 
-    console.log(search)
-
     return (
         <div className="flex flex-col gap-4 sm:flex-row sm:item-center sm:justify-between mb-6">
             <form onSubmit={handleSearch} className="flex gap-2">

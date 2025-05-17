@@ -7,7 +7,6 @@ export default function MovieDetail() {
   const [movie, setMovie] = useState<any>(null);
   const navigate = useNavigate()
 
-  console.log(id);
   useEffect(() => {
     const getMovie = async () => {
       const res = await fetchMovieDetails(Number(id));
@@ -16,9 +15,6 @@ export default function MovieDetail() {
     };
     getMovie();
   }, [id])
-
-  console.log('ma', movie);
-
 
   return (
     <div className="p-4">
